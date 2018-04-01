@@ -1580,12 +1580,12 @@ wxDriverBBC.prototype = {
 
   drivertype: 'BBC',
   maxDays: 3,
-  linkText: 'www.bbc.co.uk/weather',
+  linkText: 'www.bbc.com/weather',
 
   // these will be dynamically reset when data is loaded
-  linkURL: 'http://www.bbc.co.uk/weather/',
+  linkURL: 'http://www.bbc.com/weather/',
 
-  _baseURL: 'http://open.live.bbc.co.uk/weather/feeds/en/',
+  _baseURL: 'http://open.live.bbc.com/weather/feeds/en/',
 
   // initialise the driver
   _bbcinit: function(stationID) {
@@ -1598,7 +1598,7 @@ wxDriverBBC.prototype = {
   refreshData: function(deskletObj) {
     // reset the data object
     this._emptyData();
-    this.linkURL = 'http://www.bbc.co.uk/weather';
+    this.linkURL = 'http://www.bbc.com/weather';
 
     // process the three day forecast
     let a = this._getWeather(this._baseURL + this.stationID + '/' + '3dayforecast' + '.rss', function(weather) {
